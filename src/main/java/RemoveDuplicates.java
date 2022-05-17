@@ -1,10 +1,5 @@
 import java.util.Stack;
 
-/**
- * Copyright 2022, Xiaomi.
- * All rights reserved.
- * Author: huyumei@xiaomi.com
- */
 public class RemoveDuplicates {
 	public String removeDuplicates(String s) {
 		Stack<Character> characters = new Stack<>();

@@ -1,10 +1,6 @@
 import java.util.Stack;
 
-/**
- * Copyright 2022, Xiaomi.
- * All rights reserved.
- * Author: huyumei@xiaomi.com
- */
+
 public class EvalRPN {
 	public int evalRPN(String[] tokens) {
 		int result = 0;

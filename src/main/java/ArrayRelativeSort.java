@@ -3,11 +3,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 
-/**
- * Copyright 2022, Xiaomi.
- * All rights reserved.
- * Author: huyumei@xiaomi.com
- */
 public class ArrayRelativeSort {
 	public int[] relativeSortArray(int[] arr1, int[] arr2) {
 			TreeMap<Integer, Integer> treeMap = new TreeMap<Integer, Integer>();
