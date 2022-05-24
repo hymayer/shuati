@@ -10,7 +10,7 @@ import java.util.Arrays;
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+class SortSolution {
 
     public class ListNode {
         int val;
@@ -185,7 +185,7 @@ class Solution {
 
     public static void main(String[] args) {
         int[] nums = new int[]{5,2,3,1};
-        Solution solution = new Solution();
+        SortSolution solution = new SortSolution();
         System.out.println(Arrays.toString(solution.sortArray(nums)));
     }
 }

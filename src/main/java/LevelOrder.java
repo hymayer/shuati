@@ -7,7 +7,7 @@ import java.util.Queue;
 public class LevelOrder {
 	private List<List<Integer>> resList = new ArrayList<List<Integer>>();
 
-	public List<List<Integer>> levelOrder(TreeNode root) {
+	public List<List<Integer>> levelOrder(BinaryTree root) {
 		//checkFun01(root,0);
 		checkFun02(root);
 
@@ -15,7 +15,7 @@ public class LevelOrder {
 	}
 
 	//DFS--递归方式
-	private void checkFun01(TreeNode node, Integer deep) {
+	private void checkFun01(BinaryTree node, Integer deep) {
 		if (node == null) {
 			return;
 		}
@@ -33,11 +33,11 @@ public class LevelOrder {
 	}
 
 	//BFS--迭代方式--借助队列
-	private void checkFun02(TreeNode node) {
+	private void checkFun02(BinaryTree node) {
 		if (node == null) {
 			return;
 		}
-		Queue<TreeNode> que = new LinkedList<TreeNode>();
+		Queue<BinaryTree> que = new LinkedList<BinaryTree>();
 		que.offer(node);
 
 		while (!que.isEmpty()) {
@@ -45,7 +45,7 @@ public class LevelOrder {
 			int len = que.size();
 
 			while (len > 0) {
-				TreeNode tmpNode = que.poll();
+				BinaryTree tmpNode = que.poll();
 				itemList.add(tmpNode.val);
 
 				if (tmpNode.left != null) {
@@ -63,9 +63,9 @@ public class LevelOrder {
 	}
 
 
-	public List<List<Integer>> solution1(TreeNode root) {
+	public List<List<Integer>> solution1(BinaryTree root) {
 		List<List<Integer>> list = new ArrayList<>();
-		Deque<TreeNode> que = new LinkedList<>();
+		Deque<BinaryTree> que = new LinkedList<>();
 		if (root == null) {
 			return list;
 		}
@@ -75,7 +75,7 @@ public class LevelOrder {
 			List<Integer> itemList = new ArrayList<>();
 			int len = que.size();
 			while (len-- > 0) {
-				TreeNode tmpNode = que.pollFirst();
+				BinaryTree tmpNode = que.pollFirst();
 				itemList.add(tmpNode.val);
 				if (tmpNode.left != null) {
 					que.offerLast(tmpNode.left);
